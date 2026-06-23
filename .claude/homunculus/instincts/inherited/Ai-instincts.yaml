@@ -1,0 +1,338 @@
+# Instincts generated from https://github.com/argho1863-web/Ai
+# Generated: 2026-06-23T11:28:34.424Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: Ai-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/argho1863-web/Ai
+---
+
+# Ai Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat
+
+## Evidence
+
+- 1 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat: Implement 3D F1 race game with NPC AI and mobile controls
+
+---
+id: Ai-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/argho1863-web/Ai
+---
+
+# Ai Commit Length
+
+## Action
+
+Write moderate-length commit messages (~63 characters)
+
+## Evidence
+
+- Average commit message length: 63 chars
+- Based on 1 commits
+
+---
+id: Ai-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/argho1863-web/Ai
+---
+
+# Ai Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: Ai-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/argho1863-web/Ai
+---
+
+# Ai Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: Ai-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/argho1863-web/Ai
+---
+
+# Ai Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: Ai-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/argho1863-web/Ai
+---
+
+# Ai Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: assets, components, constants, hooks, tests
+
+---
+id: Ai-test-colocate
+trigger: "when writing tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/argho1863-web/Ai
+---
+
+# Ai Test Colocate
+
+## Action
+
+Place test file next to the source file (e.g., Button.test.tsx next to Button.tsx)
+
+## Evidence
+
+- Colocated test pattern detected
+- Tests live alongside source files
+
+---
+id: ai-instinct-file-naming-camelcase
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct File Naming Camelcase
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: ai-instinct-function-naming-camelcase
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Function Naming Camelcase
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: ai-instinct-class-naming-pascalcase
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Class Naming Pascalcase
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: ai-instinct-constant-naming-screaming-snake-case
+trigger: "When declaring a constant value"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Constant Naming Screaming Snake Case
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: ai-instinct-import-style-relative
+trigger: "When importing modules within the project"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Import Style Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: ai-instinct-export-style-mixed
+trigger: "When exporting modules or components"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Export Style Mixed
+
+## Action
+
+Use either named or default exports as appropriate
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: ai-instinct-test-colocation
+trigger: "When adding a test for a component or module"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Test Colocation
+
+## Action
+
+Place the test file in the same folder as the component/module
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: ai-instinct-test-folder-naming
+trigger: "When creating a folder for tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Test Folder Naming
+
+## Action
+
+Name the folder 'tests'
+
+## Evidence
+
+- Pattern in architecture.folderStructure.srcLayout
+
+---
+id: ai-instinct-git-commit-conventional-feat
+trigger: "When committing a new feature"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Git Commit Conventional Feat
+
+## Action
+
+Prefix the commit message with 'feat:' following conventional commit format
+
+## Evidence
+
+- Seen in commit: 'feat: Implement 3D F1 race game with NPC AI and mobile controls'
+- Pattern in commits.prefixes
+
+---
+id: ai-instinct-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: argho1863-web/Ai
+---
+
+# Ai Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 63 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
