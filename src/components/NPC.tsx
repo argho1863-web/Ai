@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { useRaycastVehicle, useBox } from '@react-three/cannon';
+import { useRaycastVehicle, useBox, type WheelInfoOptions } from '@react-three/cannon';
 import { F1CarModel } from './F1CarModel';
 import * as THREE from 'three';
 import { WAYPOINTS } from '../constants/track';
@@ -13,7 +13,7 @@ export const NPC = ({ position, rotation, color = 'blue', waypointIndex = 0 }: {
   const chassisFront = 2;
   const chassisBack = 2;
 
-  const [chassisBody, chassisApi] = useBox(() => ({
+  const [chassisBody] = useBox(() => ({
     allowSleep: false,
     args: [chassisWidth, chassisHeight, chassisFront + chassisBack],
     mass: 500,
@@ -21,7 +21,7 @@ export const NPC = ({ position, rotation, color = 'blue', waypointIndex = 0 }: {
     rotation,
   }));
 
-  const wheelInfo = {
+  const wheelInfo: WheelInfoOptions = {
     radius: 0.4,
     directionLocal: [0, -1, 0],
     suspensionStiffness: 30,
@@ -37,7 +37,7 @@ export const NPC = ({ position, rotation, color = 'blue', waypointIndex = 0 }: {
     frictionSlip: 2,
   };
 
-  const wheelInfos = [
+  const wheelInfos: WheelInfoOptions[] = [
     { ...wheelInfo, chassisConnectionPointLocal: [-1, 0, 1.5], isFrontWheel: true },
     { ...wheelInfo, chassisConnectionPointLocal: [1, 0, 1.5], isFrontWheel: true },
     { ...wheelInfo, chassisConnectionPointLocal: [-1, 0, -1.5], isFrontWheel: false },

@@ -1,8 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
-import { useRaycastVehicle, useBox, useCylinder } from '@react-three/cannon';
+import { useRaycastVehicle, useBox, type WheelInfoOptions } from '@react-three/cannon';
 import { F1CarModel } from './F1CarModel';
-import { useControls } from '../hooks/useControls';
 import * as THREE from 'three';
 
 export const Car = ({ position = [50, 2, 0], rotation = [0, Math.PI, 0], controls }: { position?: [number, number, number], rotation?: [number, number, number], controls: any }) => {
@@ -21,7 +20,7 @@ export const Car = ({ position = [50, 2, 0], rotation = [0, Math.PI, 0], control
     rotation,
   }));
 
-  const wheelInfo = {
+  const wheelInfo: WheelInfoOptions = {
     radius: 0.4,
     directionLocal: [0, -1, 0],
     suspensionStiffness: 30,
@@ -37,7 +36,7 @@ export const Car = ({ position = [50, 2, 0], rotation = [0, Math.PI, 0], control
     frictionSlip: 2,
   };
 
-  const wheelInfos = [
+  const wheelInfos: WheelInfoOptions[] = [
     { ...wheelInfo, chassisConnectionPointLocal: [-1, 0, 1.5], isFrontWheel: true },
     { ...wheelInfo, chassisConnectionPointLocal: [1, 0, 1.5], isFrontWheel: true },
     { ...wheelInfo, chassisConnectionPointLocal: [-1, 0, -1.5], isFrontWheel: false },

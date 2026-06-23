@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const F1CarModel = ({ color = 'red' }: { color?: string }) => {
   return (
     <group>

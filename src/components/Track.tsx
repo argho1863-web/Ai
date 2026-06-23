@@ -1,4 +1,3 @@
-import React from 'react';
 import { usePlane } from '@react-three/cannon';
 import * as THREE from 'three';
 
@@ -25,8 +24,7 @@ export const Track = () => {
     new THREE.Vector3(45, 0, -20),
   ], true);
 
-  // const points = curve.getPoints(100);
-  // const trackGeometry = new THREE.TubeGeometry(curve, 100, 6, 8, true);
+  console.log('Track curve initialized', curve);
 
   return (
     <>

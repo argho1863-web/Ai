@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Physics } from '@react-three/cannon';
-import { Sky, OrbitControls } from '@react-three/drei';
+import { Sky } from '@react-three/drei';
 import { Track } from './components/Track';
 import { Car } from './components/Car';
 import { NPC } from './components/NPC';

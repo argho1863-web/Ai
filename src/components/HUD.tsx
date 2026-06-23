@@ -1,6 +1,3 @@
-import React from 'react';
-import { useControls } from '../hooks/useControls';
-
 export const HUD = ({ controls }: { controls: any }) => {
   const { setControl } = controls;
 
